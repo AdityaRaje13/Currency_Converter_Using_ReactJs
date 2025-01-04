@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.container{
+  background-image: url('../public/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+
+  display: flex;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 500px;
+  padding: 25px 60px;
+  border-radius: 10px;
+  box-shadow: 5px gray;
+}
+
+.card input{
+  padding: 7px 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px gray;
+  border: none;
+  margin-top: 10px;
+}
+
+.card select{
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px gray;
+  border: none;
+  margin-top: 10px;
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card1, .card2{
+  margin: 10px 0px;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button{
+
+  width: 400px;
+  background-color: rgb(59, 59, 231);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.button:hover {
+  background: white;
+  color: rgb(56, 56, 244);
+  border-color: rgb(56, 56, 244);
+  box-shadow: 0 0 20px rgb(56, 56, 244), 0 0 40px rgb(56, 56, 244), 0 0 60px rgb(56, 56, 244);
+}
+
+.button::before {
+  background: radial-gradient(circle, rgb(42, 42, 240), transparent 70%);
+  transform: translate(0, 0);
+  transition: 0.4s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: translate(25%, 25%);
+  opacity: 1;
+}
